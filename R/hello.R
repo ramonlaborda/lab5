@@ -14,12 +14,8 @@ geocodification <- function(address){
   library(RCurl)
 
 
-  url <- URLencode(paste("https://maps.googleapis.com/maps/api/geocode/json?address=", address,sep = " "))
+  url <- URLencode("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDF_HnxHjHczjpjdoJk5wdhDgvqT1o29RE")
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)
-  if(dataUrljson$status == "ok"){
-    return(dataUrljson)
-  }else{
-    print("error")
-  }
+  return(dataUrljson)
 }
