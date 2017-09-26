@@ -18,7 +18,7 @@ geocodification <- function(address){
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)
   if(dataUrljson$status == "ok"){
-    print("prueba")
+    return(dataUrljson)
   }else{
     print("error")
   }
