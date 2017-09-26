@@ -19,3 +19,4 @@ geocodification <- function(address){
   dataUrljson <- fromJSON(dataUrl)
   return(dataUrljson)
 }
+#do i need to add an API?? does it has to be mine?
