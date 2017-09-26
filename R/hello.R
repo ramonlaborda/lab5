@@ -1,18 +1,23 @@
-# Hello, world!
+# geocodification
 #
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
+# This is the code to read from an API the adress or
+# coordinates using Google Maps
 #
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
+# A request for Google Maps Geocoding must be like:
+# https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters
+# where outputFormat has to be JSON or xml and the parameter an address or location
+# we will use JSON to convert R objects into JSON objects and vice-versa
+# we will use RCurl Functions to percent-encode or decode characters in URLs.
 
-hello <- function() {
-  print("Hello, world!")
+geocodification <- function(address){
+  library(rjson)
+  library(RCurl)
+
+
+  url <- URLencode(paste("https://maps.googleapis.com/maps/api/geocode/json?address=", address,sep = " "))
+  dataUrl <- getURL(url)
+  dataUrljson <- fromJSON(dataUrl)
+  if(dataUrljson$status == "ok"){
+    print(prueba)
+  }
 }
