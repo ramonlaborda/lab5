@@ -16,6 +16,3 @@
 hello <- function() {
   print("Hello, world!")
 }
-bye <- function(){
-  print("bye")
-}
