@@ -17,6 +17,8 @@ geocodification <- function(address){
   url <- URLencode("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDF_HnxHjHczjpjdoJk5wdhDgvqT1o29RE")
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)
-  return(dataUrljson)
+  if(dataUrljson$status=="OK"){
+    return(dataUrljson)
+  }
 }
 #do i need to add an API?? does it has to be mine?
