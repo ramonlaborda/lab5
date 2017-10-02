@@ -12,13 +12,19 @@
 geocodification <- function(address){
   library(rjson)
   library(RCurl)
-
-
-  url <- URLencode("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyDF_HnxHjHczjpjdoJk5wdhDgvqT1o29RE")
+  url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)
   if(dataUrljson$status=="OK"){
-    return(dataUrljson)
+    theaddress <- dataUrljson$results[[1]]$formatted_address
+    lat<- dataUrljson$results[[1]]$geometry$location$lat
+    long <- dataUrljson$results[[1]]$geometry$location$lng
+  }else{
+    theaddress <- "ERROR"
+    lat <- 0
+    long <- 0
   }
+  result <- data.frame(address=theaddress, latitude=lat, longitud=long)
+  return(result)
 }
 #do i need to add an API?? does it has to be mine?
