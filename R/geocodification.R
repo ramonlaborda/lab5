@@ -12,6 +12,7 @@
 geocodification <- function(address){
   library(rjson)
   library(RCurl)
+  library(testthat)
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)
@@ -24,7 +25,6 @@ geocodification <- function(address){
     lat <- 0
     long <- 0
   }
-  result <- data.frame(address=theaddress, latitude=lat, longitud=long)
+  result <- data.frame(address=theaddress, latitude=lat, longitud=long, stringsAsFactors = FALSE)
   return(result)
 }
-#do i need to add an API?? does it has to be mine?
