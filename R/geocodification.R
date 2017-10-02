@@ -9,6 +9,20 @@
 # we will use JSON to convert R objects into JSON objects and vice-versa
 # we will use RCurl Functions to percent-encode or decode characters in URLs.
 
+#' Google Geocoding API connector
+#'
+#' @description Passes the function parameter \code{address} as a parameter to the API via URL.
+#' Then it returns the output of the request into a formatted dataframe with the geocoding information.
+#'
+#'
+#' @param address A character vector with an address or some coordinates (latitude and longitude)
+#'
+#' @return A data.frame containing the resulting \code{address}, \code{latitude} and \code{longitud}
+#'
+#' @references
+#' Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
+#'
+
 geocodification <- function(address){
   library(rjson)
   library(RCurl)
