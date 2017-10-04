@@ -27,6 +27,7 @@ geocodification <- function(address){
   library(rjson)
   library(RCurl)
   library(testthat)
+  library(shiny)
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
   dataUrl <- getURL(url)
   dataUrljson <- fromJSON(dataUrl)

@@ -2,6 +2,7 @@
 
 library(testthat)
 library(lab5)
+library(shiny)
 
 #testing the inputs and outputs of our functions
 test_that("geocodification good output", {
@@ -16,7 +17,7 @@ test_that("geocodification(address) works",{
   expect_equal(geocodification("Linköping"),
                data.frame(address = "Linköping, Sweden",
                           latitude = 58.41081,
-                          longitud = 15.62137,stringsAsFactors = FALSE),tolerance=0.00001)
+                          longitud = 15.62137,stringsAsFactors = FALSE),tolerance=0.001)
   #coordinates
   expect_equal(geocodification("58.41081, 15.62137"),
                data.frame(address = "Storgatan 48, 582 23 Linköping, Sweden",
