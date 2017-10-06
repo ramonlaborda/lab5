@@ -11,7 +11,7 @@
 
 #' Google Geocoding API connector
 #'
-#' @description Passes the function parameter \code{address} as a parameter to the API via URL.
+#' Passes the function parameter \code{address} as a parameter to the API via URL.
 #' Then it returns the output of the request into a formatted dataframe with the geocoding information.
 #'
 #'
@@ -19,16 +19,15 @@
 #'
 #' @return A data.frame containing the resulting \code{address}, \code{latitude} and \code{longitud}
 #'
-#' @references
-#' Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
+#' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
-#'@export
+#' @export
 #'
 
-library(rjson)
-library(RCurl)
-library(testthat)
-library(shiny)
+require(rjson)
+require(RCurl)
+require(testthat)
+require(shiny)
 
 geocodification <- function(address){
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
