@@ -1,7 +1,7 @@
 Package: lab5
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1
+Title: Geocodification
+Version: 1.0.0
 Date: 2017-09-26
 Author: Alejandro Garcia and Ramon Laborda
 Maintainer: Ramon Laborda <ramonlab538@student.liu.se
