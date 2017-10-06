@@ -24,10 +24,6 @@
 #' @export
 #'
 
-require(rjson)
-require(RCurl)
-require(testthat)
-require(shiny)
 
 geocodification <- function(address){
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
