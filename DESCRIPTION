@@ -4,9 +4,9 @@ Title: What the Package Does (Title Case)
 Version: 0.1
 Date: 2017-09-26
 Author: Alejandro Garcia and Ramon Laborda
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Maintainer: Ramon Laborda <ramonlab356@student.liu.se
 Description: More about what it does (maybe more than one line)
-License: What license is it under?
+License: GPL-2
 LazyData: TRUE
 Suggests: knitr,
     rmarkdown, shiny, rjson, RCurl, testthat
