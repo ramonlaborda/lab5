@@ -1,11 +1,17 @@
 Package: lab5
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1
+Title: A Google Geocodification
+Version: 1.0.0
 Date: 2017-09-26
 Author: Alejandro Garcia and Ramon Laborda
+<<<<<<< HEAD
 Maintainer: Ramon Laborda <ramonlab538@student.liu.se>
 Description: More about what it does (maybe more than one line)
+=======
+Maintainer: Ramon Laborda <ramonlab538@student.liu.se
+Description:  A faster and robust tool for connecting to Google Geocoding API
+    and convert adresses into coordinates and vice versa.
+>>>>>>> 24d7820d8b6125329744dafb39a22cfaa166d733
 License: GPL-2
 Depends: shiny, rjson, RCurl
 LazyData: TRUE
