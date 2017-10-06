@@ -10,6 +10,7 @@ Description:  A faster and robust tool for connecting to Google Geocoding API
 License: GPL-2
 Depends: shiny, rjson, RCurl
 LazyData: TRUE
+Imports: RCurl, rjson
 Suggests: knitr,
     rmarkdown, testthat
 VignetteBuilder: knitr
