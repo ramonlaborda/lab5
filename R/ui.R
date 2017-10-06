@@ -1,6 +1,5 @@
 #shiny application
 library(shiny)
-library(lab5)
 library(testthat)
 shinyUI(fluidPage(
 

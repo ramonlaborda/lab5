@@ -1,7 +1,6 @@
 #testing
 
 library(testthat)
-library(lab5)
 library(shiny)
 
 #testing the inputs and outputs of our functions

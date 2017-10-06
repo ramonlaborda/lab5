@@ -4,11 +4,12 @@ Title: What the Package Does (Title Case)
 Version: 0.1
 Date: 2017-09-26
 Author: Alejandro Garcia and Ramon Laborda
-Maintainer: Ramon Laborda <ramonlab538@student.liu.se
+Maintainer: Ramon Laborda <ramonlab538@student.liu.se>
 Description: More about what it does (maybe more than one line)
 License: GPL-2
+Depends: shiny, rjson, RCurl
 LazyData: TRUE
 Suggests: knitr,
-    rmarkdown, shiny, rjson, RCurl, testthat
+    rmarkdown, testthat
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
