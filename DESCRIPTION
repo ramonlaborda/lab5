@@ -4,7 +4,7 @@ Title: A Google Geocodification
 Version: 1.0.0
 Date: 2017-09-26
 Author: Alejandro Garcia and Ramon Laborda
-Maintainer: Ramon Laborda <ramonlab538@student.liu.se
+Maintainer: Ramon Laborda <ramonlab538@student.liu.se>
 Description:  A faster and robust tool for connecting to Google Geocoding API
     and convert adresses into coordinates and vice versa.
 License: GPL-2
