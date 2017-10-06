@@ -1,14 +1,3 @@
-# Geocodification
-#
-# This is the code to read from an API the adress or
-# coordinates using Google Maps
-#
-# A request for Google Maps Geocoding must be like:
-# https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters
-# where outputFormat has to be JSON or xml and the parameter an address or location
-# we will use JSON to convert R objects into JSON objects and vice-versa
-# we will use RCurl Functions to percent-encode or decode characters in URLs.
-
 #' Google Geocoding API connector
 #'
 #' Passes the function parameter \code{address} as a parameter to the API via URL.
@@ -21,13 +10,6 @@
 #'
 #' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
-#' @export
-#'
-
-require(rjson)
-require(RCurl)
-require(testthat)
-require(shiny)
 
 geocodification <- function(address){
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
