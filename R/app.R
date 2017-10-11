@@ -12,18 +12,23 @@
 #'@name shinyapp
 #'
 library(shiny)
-ui <- fluidPage(titlePanel(title = "Geocodification"),
+ui <- fluidPage(
+  titlePanel(title = "Geocodification"),
                 sidebarLayout(
-                  sidebarPanel(("Type an address or a pair of numbers (coordinates)"),
+                  sidebarPanel(
+                    ("Type an address or a pair of numbers (coordinates)"),
                                textInput("ddss","Here: ","")),
-                  mainPanel(textOutput("ads"),textOutput("lat"),textOutput("lon"))
-                ))
+
+                  mainPanel(
+                    textOutput("ads"),
+                    textOutput("lat"),
+                    textOutput("lon")
+                    )
+                )
+  )
 server <- function(input, output) {
-  a <- renderPrint(geocodification(input$ddss)[1])
-  b <- renderPrint(geocodification(input$ddss)[2])
-  c <- renderPrint(geocodification(input$ddss)[3])
-  output$ads <- a
-  output$lat <- b
-  output$lon <- c
+  output$ads <- renderPrint(geocodification(input$ddss)[1])
+  output$lat <- renderPrint(geocodification(input$ddss)[2])
+  output$lon <- renderPrint(geocodification(input$ddss)[3])
 }
 shinyApp(ui = ui, server = server)
