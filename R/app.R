@@ -14,7 +14,6 @@
 #'@name shinyapp
 #'
 library(shiny)
-source(geocodification)
 ui <- fluidPage(
   titlePanel(title = "Geocodification"),
                 sidebarLayout(
@@ -30,6 +29,7 @@ ui <- fluidPage(
                 )
   )
 server <- function(input, output) {
+  source("geocodification.r", local = TRUE)
   output$ads <- renderPrint(geocodification(input$ddss)[1])
   output$lat <- renderPrint(geocodification(input$ddss)[2])
   output$lon <- renderPrint(geocodification(input$ddss)[3])
