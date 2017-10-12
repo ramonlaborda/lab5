@@ -14,6 +14,7 @@
 #'@name shinyapp
 #'
 library(shiny)
+source("/Users/ramonlabordamoreu/Desktop/github/lab5/R/geocodification.R",local=TRUE)
 ui <- fluidPage(
   titlePanel(title = "Geocodification"),
                 sidebarLayout(

@@ -12,7 +12,7 @@
 #'
 #' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
-
+library(RCurl)
 geocodification <- function(address){
   url <- URLencode(paste("https://maps.google.com/maps/api/geocode/json?address=",address,sep=""))
   dataUrl <- getURL(url)
