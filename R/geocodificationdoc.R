@@ -16,6 +16,7 @@
 #'
 #' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
+#'@import RCurl rjson testthat shiny
 #'
 #' @docType package
 #' @name lab5

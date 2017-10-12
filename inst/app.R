@@ -1,4 +1,4 @@
-#' Google Geocoding API connector aplication ui
+#' Google Geocoding API connector aplication
 #'
 #' Passes the function parameter \code{address} as a parameter to the API via URL.
 #' Then it returns the output of the request into a formatted dataframe with the geocoding information.
@@ -29,7 +29,6 @@ ui <- fluidPage(
                 )
   )
 server <- function(input, output) {
-  source("geocodification.r", local = TRUE)
   output$ads <- renderPrint(geocodification(input$ddss)[1])
   output$lat <- renderPrint(geocodification(input$ddss)[2])
   output$lon <- renderPrint(geocodification(input$ddss)[3])
