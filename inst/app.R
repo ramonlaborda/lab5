@@ -11,9 +11,10 @@
 #' @import RCurl rjson testthat shiny geocodification
 #'
 #' @references Google Geocoding API  - \url{https://developers.google.com/maps/documentation/geocoding/intro}
-#'@name shinyapp
+#' @name shinyapp
 #'
 library(shiny)
+library(lab5)
 ui <- fluidPage(
   titlePanel(title = "Geocodification"),
                 sidebarLayout(

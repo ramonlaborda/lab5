@@ -12,8 +12,10 @@
 #'
 #' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
-#' @export geocodification
 #' @name geocodification
+#'
+#' @export geocodification
+#'
 library(RCurl)
 library(rjson)
 library(testthat)
