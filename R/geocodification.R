@@ -8,10 +8,12 @@
 #'
 #' @return A data.frame containing the resulting \code{address}, \code{latitude} and \code{longitud}
 #'
-#' @import RCurl rjson testthat shiny
+#' @import RCurl rjson testthat shiny utils devtools
 #'
 #' @references Google Geocoding API - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'
+#' @export geocodification
+#' @name geocodification
 library(RCurl)
 library(rjson)
 library(testthat)

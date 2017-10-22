@@ -8,13 +8,12 @@
 #'
 #' @return A shiny app
 #'
-#' @import RCurl rjson testthat shiny
+#' @import RCurl rjson testthat shiny geocodification
 #'
 #' @references Google Geocoding API  - \url{https://developers.google.com/maps/documentation/geocoding/intro}
 #'@name shinyapp
 #'
 library(shiny)
-source("/Users/ramonlabordamoreu/Desktop/github/lab5/R/geocodification.R",local=TRUE)
 ui <- fluidPage(
   titlePanel(title = "Geocodification"),
                 sidebarLayout(
